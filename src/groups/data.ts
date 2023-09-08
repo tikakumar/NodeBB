@@ -57,6 +57,7 @@ function escapeGroupData(group : Group_t) {
 
 function modifyGroup(group: Group_t, fields: string[]) {
     if (group) {
+        group.userTitleEnabled = 0;
         // The next line calls a function in a module that has not been updated to TS yet
         // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access, @typescript-eslint/no-unsafe-call
         db.parseIntFields(group, intFields, fields);
